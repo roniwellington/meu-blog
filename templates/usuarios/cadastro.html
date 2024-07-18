@@ -54,6 +54,11 @@
                             <label for="{{ field.id_label }}" style="color:#303030; margin-bottom: 5px;">{{field.label}}</label>
                             {{ field }}
                         </div>
+                        {% for error in field.errors %}
+                            <div>
+                                {{error}}
+                            </div>
+                        {% endfor %}
                         {% endfor %}
                     </div>
                     <div>
